@@ -13,7 +13,7 @@ function QuestionList()
     //     borderRadius:"5px",
     //   };
 
-      const questionsData = [
+      const questions = [
         {
           question: "1. Sun rises in the ____",
           options: [
@@ -43,11 +43,11 @@ function QuestionList()
         },
       ];
     return (<React.Fragment>
-                    {questionsData.map(m=>
-                    <React.Fragment>
-                        <h2 key={m.question}><Questioncontainer>{m.question}</Questioncontainer></h2>
-                        <div>{m.options.map(mc=><Option key={mc.text}>{mc.text}</Option>)}</div>
-                    </React.Fragment>
+                    {questions.map(m=>
+                      <React.Fragment>
+                          <h2 key={m.question}><Questioncontainer>{m.question}</Questioncontainer></h2>
+                          <div>{m.options.map(mc=><Option key={mc.text}>{mc.text}</Option>)}</div>
+                      </React.Fragment>
                     )}
             </React.Fragment>)
 }
